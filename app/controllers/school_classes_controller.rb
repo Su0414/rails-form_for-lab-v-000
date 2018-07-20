@@ -9,7 +9,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
-    @school_class = Student.new(student_params(:title,:room_number))
+    @school_class = SchoolClass.new(student_params(:title,:room_number))
     @school_class.save
 	  redirect_to school_class_path(@school_class)
   end
@@ -24,7 +24,7 @@ class SchoolClassesController < ApplicationController
   end
 
   private
-  def student_params(*args)
+  def school_class_params(*args)
     params.require(:school_class).permit(*args)
   end
 
