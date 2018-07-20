@@ -66,3 +66,56 @@ Started GET "/students" for 24.46.108.174 at 2018-07-20 18:22:19 +0000
 Processing by StudentsController#index as HTML
   [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
   Rendered students/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 498ms (Views: 494.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 24.46.108.174 at 2018-07-20 18:22:20 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 24.46.108.174 at 2018-07-20 18:22:20 +0000
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 24.46.108.174 at 2018-07-20 18:22:20 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 24.46.108.174 at 2018-07-20 18:22:20 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 24.46.108.174 at 2018-07-20 18:22:20 +0000
+
+
+Started GET "/students/1" for 24.46.108.174 at 2018-07-20 18:22:21 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/1/edit" for 24.46.108.174 at 2018-07-20 18:22:25 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/edit.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 136ms (Views: 133.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/students/1" for 24.46.108.174 at 2018-07-20 18:22:30 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tmhLf/KMfVaci+qBPfoft1pT+U0DLzRpRQdAqwA+8K1lqtd0ZpihRul613iaRK71x1vDTJnREOjXKjwqIavvPA==", "student"=>{"first_name"=>"Jordan Paul", "last_name"=>"Hudgens"}, "commit"=>"Update Student", "id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "students" SET "first_name" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["first_name", "Jordan Paul"], ["updated_at", "2018-07-20 18:22:30.609437"], ["id", 1]]
+  [1m[35m (84.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://67.205.152.27:52775/students/1
+Completed 302 Found in 92ms (ActiveRecord: 85.2ms)
+
+
+Started GET "/students/1" for 24.46.108.174 at 2018-07-20 18:22:30 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.2ms)
